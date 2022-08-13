@@ -34,11 +34,11 @@ spec:
           mountPath: /clo835/config
         envFrom:
           - secretRef:
-              name: app-secret
+              name: mysql-secrets
       volumes:
       - name: app-secret-volumes
         secret:
-          secretName: app-secret
+          secretName: mysql-secrets
       - name: config-volume
         configMap:
           name: webapp-config
